@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringAndStringBuilder", "StringAndStringBuilder\StringAndStringBuilder.csproj", "{C11B8769-9C73-4543-B549-90CEDB412914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringAndStringBuilder", "StringAndStringBuilder\StringAndStringBuilder.csproj", "{C11B8769-9C73-4543-B549-90CEDB412914}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keyword 'ref'", "Keyword 'ref'\Keyword 'ref'.csproj", "{FC5C77FF-FBD0-41E3-A620-9B15C28FD138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keyword 'ref'", "Keyword 'ref'\Keyword 'ref'.csproj", "{FC5C77FF-FBD0-41E3-A620-9B15C28FD138}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keyword 'ref', 'in', 'out'", "Keyword 'ref', 'in', 'out'\Keyword 'ref', 'in', 'out'.csproj", "{74486791-FA97-467F-97F8-DE155AC33813}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FC5C77FF-FBD0-41E3-A620-9B15C28FD138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC5C77FF-FBD0-41E3-A620-9B15C28FD138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC5C77FF-FBD0-41E3-A620-9B15C28FD138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74486791-FA97-467F-97F8-DE155AC33813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74486791-FA97-467F-97F8-DE155AC33813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74486791-FA97-467F-97F8-DE155AC33813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74486791-FA97-467F-97F8-DE155AC33813}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
