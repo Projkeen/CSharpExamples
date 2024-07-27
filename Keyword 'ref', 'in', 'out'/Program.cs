@@ -2,11 +2,11 @@
 //Console.WriteLine("Hello, World!");
 static void NewValueViaRef(ref int newValue)
 {
-    newValue = 2;
+    newValue = 2;    // need initialize variable!!! if using "ref"
 }
 static void NewValueViaOut (out int newValue)
 {
-    newValue = 3; // need initialize variable!!! if using "out"
+    newValue = 3; 
 }
 
 static void ReadValue(in int r)
