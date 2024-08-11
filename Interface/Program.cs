@@ -7,30 +7,35 @@ Transport transport = new Transport();
 
 Console.WriteLine("select the transport: <Car>, <Plane>, <Ship>");
 
-    string input = Console.ReadLine();
-    try
+string input = Console.ReadLine();
+try
+{
+    if (input.ToLower() == "car")
     {
-        if (input.ToLower() == "car")
-        {
-            Car car= new Car();
-            Console.WriteLine(car.Moving());            
-            Console.WriteLine(car.AnotherService());            
-        }
-        if (input.ToLower() == "plane")
-        {
-            Plane plane = new Plane(); 
-            Console.WriteLine(plane.Moving());
-        }
-        if (input.ToLower() == "ship")
-        {
-            Ship ship = new Ship();
-            Console.WriteLine(ship.Moving());
-        }        
+        Car car = new Car();
+        Console.WriteLine(car.Moving());
+        Console.WriteLine(car.AnotherService());
     }
-    catch (Exception ex)
+    else if (input.ToLower() == "plane")
+    {
+        Plane plane = new Plane();
+        Console.WriteLine(plane.Moving());        
+    }
+    else if (input.ToLower() == "ship")
+    {
+        Ship ship = new Ship();
+        Console.WriteLine(ship.Moving());
+    }
+    else
     {
         Console.WriteLine("unknown transport!");
-        Console.WriteLine($"Непредвиденная ошибка: {ex.Message}");        
+        transport.ShowInfo();
     }
-    transport.ShowInfo();
+}
+catch(Exception ex)
+{
+    Console.WriteLine("unknown transport!");
+    Console.WriteLine($"Непредвиденная ошибка: {ex.Message}");        
+}
+//transport.ShowInfo();
 
