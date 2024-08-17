@@ -27,6 +27,10 @@ try
     {
         washingMachine.FastMode();
     }
+    else
+    {
+        Console.WriteLine("unknown mode");
+    }
 }
 catch(Exception)
 {
