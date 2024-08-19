@@ -23,7 +23,7 @@ try
     {
         washingMachine.SimpleMode();
     }
-    if (mode.ToLower()=="fast mode")
+    else if (mode.ToLower()=="fast mode")
     {
         washingMachine.FastMode();
     }
