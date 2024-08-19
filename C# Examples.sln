@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keyword 'ref', 'in', 'out'"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Interface.csproj", "{22AD27FC-ADE8-4FB8-9F17-C588E5482498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{A0A30A9F-6223-4916-802D-8677DB571E3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Properties", "Properties\Properties.csproj", "{A0A30A9F-6223-4916-802D-8677DB571E3C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WashingMachine", "WashingMachine\WashingMachine.csproj", "{FEA04946-ECAE-416F-AF52-29C050E2F274}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A0A30A9F-6223-4916-802D-8677DB571E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0A30A9F-6223-4916-802D-8677DB571E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0A30A9F-6223-4916-802D-8677DB571E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA04946-ECAE-416F-AF52-29C050E2F274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA04946-ECAE-416F-AF52-29C050E2F274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA04946-ECAE-416F-AF52-29C050E2F274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA04946-ECAE-416F-AF52-29C050E2F274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
