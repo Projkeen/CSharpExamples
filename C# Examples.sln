@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Properties", "Properties\Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WashingMachine", "WashingMachine\WashingMachine.csproj", "{FEA04946-ECAE-416F-AF52-29C050E2F274}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentApp", "RecruitmentApp\RecruitmentApp.csproj", "{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FEA04946-ECAE-416F-AF52-29C050E2F274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEA04946-ECAE-416F-AF52-29C050E2F274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEA04946-ECAE-416F-AF52-29C050E2F274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
