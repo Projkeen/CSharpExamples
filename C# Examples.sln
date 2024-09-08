@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Properties", "Properties\Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WashingMachine", "WashingMachine\WashingMachine.csproj", "{FEA04946-ECAE-416F-AF52-29C050E2F274}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentApp", "RecruitmentApp\RecruitmentApp.csproj", "{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentApp", "RecruitmentApp\RecruitmentApp.csproj", "{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accessors {get}{set}", "Accessors {get}{set}\Accessors {get}{set}.csproj", "{4F5E3682-AA83-4A12-9F8B-993B8B2E9899}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeMachine", "CoffeMachine\CoffeMachine.csproj", "{4A102259-DB3A-453B-9F68-A509039AE1F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{203F489A-6CE8-46FF-BEE9-A5394A7DFC48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5E3682-AA83-4A12-9F8B-993B8B2E9899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5E3682-AA83-4A12-9F8B-993B8B2E9899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5E3682-AA83-4A12-9F8B-993B8B2E9899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5E3682-AA83-4A12-9F8B-993B8B2E9899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A102259-DB3A-453B-9F68-A509039AE1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A102259-DB3A-453B-9F68-A509039AE1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A102259-DB3A-453B-9F68-A509039AE1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A102259-DB3A-453B-9F68-A509039AE1F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
