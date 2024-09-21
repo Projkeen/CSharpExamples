@@ -36,7 +36,8 @@ namespace ManipulatingWithArray
                 Console.WriteLine("3. Find the sum elements of array");
                 Console.WriteLine("4. Find the average number of array");
                 Console.WriteLine("5. Find the smallest number of array and square it");
-                Console.WriteLine("6. Exit");
+                Console.WriteLine("6. Find the smallest number of array, square it and show new array");
+                Console.WriteLine("7. Exit");
                 Console.WriteLine("_____________________________________________________");
                 var input = Console.ReadLine();
                 try
@@ -59,6 +60,14 @@ namespace ManipulatingWithArray
                             SquareSmallestNumber(array);
                             break;
                         case "6":
+                            ChangeSmallestNumber(array);                            
+                            Console.WriteLine("New array:");
+                            foreach (int num in array)
+                            {
+                                Console.Write(num + " ");
+                            }
+                            break;
+                        case "7":
                             Console.WriteLine("Good bye");
                             return;
                         default:
@@ -147,6 +156,21 @@ namespace ManipulatingWithArray
             Console.WriteLine("Smallest number in an array squared: "+ min);
 
 
+        }
+
+        static int[] ChangeSmallestNumber(int[] arr)
+        {
+            int minIndex = 0;
+            for(int i=1; i<arr.Length; i++)
+            {
+                if (arr[i] < arr[minIndex])
+                {
+                    minIndex = i;
+                }
+            }
+            arr[minIndex] *= arr[minIndex];
+
+            return arr;
         }
     }
 }
