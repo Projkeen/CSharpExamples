@@ -32,10 +32,11 @@ namespace ManipulatingWithArray
                 Console.WriteLine();
                 Console.WriteLine("Select operation:");
                 Console.WriteLine("1. Bubble Sorting");
-                Console.WriteLine("2. Find the smallest element of array");
+                Console.WriteLine("2. Find the biggest element of array");
                 Console.WriteLine("3. Find the sum elements of array");
                 Console.WriteLine("4. Find the average number of array");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Find the smallest number of array and square it");
+                Console.WriteLine("6. Exit");
                 Console.WriteLine("_____________________________________________________");
                 var input = Console.ReadLine();
                 try
@@ -46,7 +47,7 @@ namespace ManipulatingWithArray
                             BubbleSort(array);
                             break;
                         case "2":
-                            MinElement(array);
+                            MaxElement(array);
                             break;
                         case "3":
                             SumElements(array);
@@ -55,6 +56,9 @@ namespace ManipulatingWithArray
                             Console.WriteLine("Average number: " + AverageNumber(array));
                             break;
                         case "5":
+                            SquareSmallestNumber(array);
+                            break;
+                        case "6":
                             Console.WriteLine("Good bye");
                             return;
                         default:
@@ -68,8 +72,6 @@ namespace ManipulatingWithArray
                     Console.WriteLine($"Error: {ex.Message}");
                 }
             }
-
-
         }
 
         static void BubbleSort(int[] arr)
@@ -97,17 +99,17 @@ namespace ManipulatingWithArray
             }
         }
 
-        static void MinElement(int[] arr)
+        static void MaxElement(int[] arr)
         {
-            int min = arr[0];
+            int max = arr[0];
             for (int i = 0; i < arr.Length; i++)
             {
-                if (min > arr[i])
+                if (max < arr[i])
                 {
-                    min = arr[i];
+                    max = arr[i];
                 }
             }
-            Console.WriteLine("The smallest element of array: " + min);
+            Console.WriteLine("The biggest element of array: " + max);
         }
         static void SumElements(int[] arr)
         {
@@ -128,6 +130,23 @@ namespace ManipulatingWithArray
             }
             double average = sum / arr.Length;
             return average;
+        }
+
+        static void SquareSmallestNumber(int[] arr)
+        {
+            int min = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (min > arr[i])
+                {
+                    min = arr[i];
+                }
+            }
+            min *= min;         
+            
+            Console.WriteLine("Smallest number in an array squared: "+ min);
+
+
         }
     }
 }
