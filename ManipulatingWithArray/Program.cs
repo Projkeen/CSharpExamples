@@ -40,6 +40,7 @@ namespace ManipulatingWithArray
                 Console.WriteLine("5. Find the smallest number of array and square it");
                 Console.WriteLine("6. Find the smallest number of array, square it and show new array");
                 Console.WriteLine("7. Multiplication every elements of array via recursion");
+                Console.WriteLine("8. Square all elements of array");
                 Console.WriteLine("_____________________________________________________");
                 var input = Console.ReadLine();
                 try
@@ -74,7 +75,7 @@ namespace ManipulatingWithArray
                             break;
                         case "7":                            
                             Console.WriteLine("The result of multiplying all array elements: " +
-                                                MultiplyElementsViaRecursion(array, array.Length - 1));
+                                       MultiplyElementsViaRecursion(array, array.Length - 1));
                             Console.WriteLine("Array:");
                             foreach (int num in array)
                             {
@@ -82,6 +83,15 @@ namespace ManipulatingWithArray
                             }
                             Console.WriteLine();
                             Console.WriteLine("___________________________________________________");
+                            break;
+                        case "8": 
+                            Console.WriteLine("Squared all elements:");
+                            SquareAllElements(array);
+                            Console.WriteLine("New array:");
+                            foreach (int num in array)
+                            {
+                                Console.Write(num + " ");
+                            }
                             break;
                         default:
                             Console.WriteLine("Unknown command");
@@ -190,6 +200,15 @@ namespace ManipulatingWithArray
 
             int result = arr [i] * MultiplyElementsViaRecursion(arr, i-1);
             return result;
+        }
+
+        static int[] SquareAllElements(int[] arr)
+        {            
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] *= arr[i];
+            }
+            return arr;
         }
     }
 }
