@@ -30,20 +30,25 @@ namespace ManipulatingWithArray
             while (true)
             {
                 Console.WriteLine();
+                Console.WriteLine();
                 Console.WriteLine("Select operation:");
+                Console.WriteLine("0. Exit");
                 Console.WriteLine("1. Bubble Sorting");
                 Console.WriteLine("2. Find the biggest element of array");
                 Console.WriteLine("3. Find the sum elements of array");
                 Console.WriteLine("4. Find the average number of array");
                 Console.WriteLine("5. Find the smallest number of array and square it");
                 Console.WriteLine("6. Find the smallest number of array, square it and show new array");
-                Console.WriteLine("7. Exit");
+                Console.WriteLine("7. Multiplication every elements of array via recursion");
                 Console.WriteLine("_____________________________________________________");
                 var input = Console.ReadLine();
                 try
                 {
                     switch (input)
                     {
+                        case "0":
+                            Console.WriteLine("Good bye");
+                            return;
                         case "1":
                             BubbleSort(array);
                             break;
@@ -67,9 +72,17 @@ namespace ManipulatingWithArray
                                 Console.Write(num + " ");
                             }
                             break;
-                        case "7":
-                            Console.WriteLine("Good bye");
-                            return;
+                        case "7":                            
+                            Console.WriteLine("The result of multiplying all array elements: " +
+                                                MultiplyElementsViaRecursion(array, array.Length - 1));
+                            Console.WriteLine("Array:");
+                            foreach (int num in array)
+                            {
+                                Console.Write(num + " ");
+                            }
+                            Console.WriteLine();
+                            Console.WriteLine("___________________________________________________");
+                            break;
                         default:
                             Console.WriteLine("Unknown command");
                             break;
@@ -154,8 +167,6 @@ namespace ManipulatingWithArray
             min *= min;         
             
             Console.WriteLine("Smallest number in an array squared: "+ min);
-
-
         }
 
         static int[] ChangeSmallestNumber(int[] arr)
@@ -169,8 +180,16 @@ namespace ManipulatingWithArray
                 }
             }
             arr[minIndex] *= arr[minIndex];
-
             return arr;
+        }
+
+        static int MultiplyElementsViaRecursion(int[] arr, int i)
+        {
+            if (i < 0)
+                return 1; // exit method
+
+            int result = arr [i] * MultiplyElementsViaRecursion(arr, i-1);
+            return result;
         }
     }
 }
