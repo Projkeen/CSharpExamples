@@ -10,7 +10,7 @@ namespace ManipulatingWithArray
         {
             Console.Write("Enter the array size: ");
             int size = int.Parse(Console.ReadLine());
-
+            
             int[] array = new int[size];
 
             Console.WriteLine("Enter the elements of array:");
@@ -41,6 +41,7 @@ namespace ManipulatingWithArray
                 Console.WriteLine("6. Find the smallest number of array, square it and show new array");
                 Console.WriteLine("7. Multiplication every elements of array via recursion");
                 Console.WriteLine("8. Square all elements of array");
+                Console.WriteLine("9. Square element of array");
                 Console.WriteLine("_____________________________________________________");
                 var input = Console.ReadLine();
                 try
@@ -87,6 +88,14 @@ namespace ManipulatingWithArray
                         case "8": 
                             Console.WriteLine("Squared all elements:");
                             SquareAllElements(array);
+                            Console.WriteLine("New array:");
+                            foreach (int num in array)
+                            {
+                                Console.Write(num + " ");
+                            }
+                            break;
+                        case "9":
+                            PowElement(array);
                             Console.WriteLine("New array:");
                             foreach (int num in array)
                             {
@@ -209,6 +218,30 @@ namespace ManipulatingWithArray
                 arr[i] *= arr[i];
             }
             return arr;
+        }
+
+        static int[] PowElement(int[] arr)
+        {
+            Console.WriteLine("Enter index of array:");
+            var input = Convert.ToInt32(Console.ReadLine());            
+            if (input>=0 && input <= arr.Length-1)
+            {
+                Console.WriteLine("Enter degree:");
+                var degree = Convert.ToInt32(Console.ReadLine());
+                int result = 1;
+                for (int i = 0; i < degree; i++)
+                {
+                    result = result * arr[input];
+                }
+                arr[input]= result;
+                Console.WriteLine("Index "+ input + " changed: " + result);                
+            }
+            else
+            {
+                Console.WriteLine("Index incorrect");                
+            }
+            return arr;
+
         }
     }
 }
