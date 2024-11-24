@@ -1,6 +1,7 @@
 ﻿using System;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Linq;
+using System.Buffers;
 
 namespace ManipulatingWithArray
 {
@@ -10,7 +11,7 @@ namespace ManipulatingWithArray
         {
             Console.Write("Enter the array size: ");
             int size = int.Parse(Console.ReadLine());
-            
+
             int[] array = new int[size];
 
             Console.WriteLine("Enter the elements of array:");
@@ -42,6 +43,8 @@ namespace ManipulatingWithArray
                 Console.WriteLine("7. Multiplication every elements of array via recursion");
                 Console.WriteLine("8. Square all elements of array");
                 Console.WriteLine("9. Square element of array");
+                Console.WriteLine("10. Change element of array");
+                Console.WriteLine("11. Change size of array");
                 Console.WriteLine("_____________________________________________________");
                 var input = Console.ReadLine();
                 try
@@ -67,14 +70,14 @@ namespace ManipulatingWithArray
                             SquareSmallestNumber(array);
                             break;
                         case "6":
-                            ChangeSmallestNumber(array);                            
+                            ChangeSmallestNumber(array);
                             Console.WriteLine("New array:");
                             foreach (int num in array)
                             {
                                 Console.Write(num + " ");
                             }
                             break;
-                        case "7":                            
+                        case "7":
                             Console.WriteLine("The result of multiplying all array elements: " +
                                        MultiplyElementsViaRecursion(array, array.Length - 1));
                             Console.WriteLine("Array:");
@@ -85,7 +88,7 @@ namespace ManipulatingWithArray
                             Console.WriteLine();
                             Console.WriteLine("___________________________________________________");
                             break;
-                        case "8": 
+                        case "8":
                             Console.WriteLine("Squared all elements:");
                             SquareAllElements(array);
                             Console.WriteLine("New array:");
@@ -102,11 +105,26 @@ namespace ManipulatingWithArray
                                 Console.Write(num + " ");
                             }
                             break;
+                        case "10":
+                            ChangeIndexInArray(array);
+                            Console.WriteLine("New array:");
+                            foreach (int num in array)
+                            {
+                                Console.Write(num + " ");
+                            }
+                            break;
+                        case "11":
+                            ChangeArraySize(ref array);
+                            Console.WriteLine("New array:");
+                            foreach (int num in array)
+                            {
+                                Console.Write(num + " ");
+                            }
+                            break;
                         default:
                             Console.WriteLine("Unknown command");
                             break;
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -183,15 +201,15 @@ namespace ManipulatingWithArray
                     min = arr[i];
                 }
             }
-            min *= min;         
-            
-            Console.WriteLine("Smallest number in an array squared: "+ min);
+            min *= min;
+
+            Console.WriteLine("Smallest number in an array squared: " + min);
         }
 
         static int[] ChangeSmallestNumber(int[] arr)
         {
             int minIndex = 0;
-            for(int i=1; i<arr.Length; i++)
+            for (int i = 1; i < arr.Length; i++)
             {
                 if (arr[i] < arr[minIndex])
                 {
@@ -207,12 +225,12 @@ namespace ManipulatingWithArray
             if (i < 0)
                 return 1; // exit method
 
-            int result = arr [i] * MultiplyElementsViaRecursion(arr, i-1);
+            int result = arr[i] * MultiplyElementsViaRecursion(arr, i - 1);
             return result;
         }
 
         static int[] SquareAllElements(int[] arr)
-        {            
+        {
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] *= arr[i];
@@ -223,8 +241,8 @@ namespace ManipulatingWithArray
         static int[] PowElement(int[] arr)
         {
             Console.WriteLine("Enter index of array:");
-            var input = Convert.ToInt32(Console.ReadLine());            
-            if (input>=0 && input <= arr.Length-1)
+            var input = Convert.ToInt32(Console.ReadLine());
+            if (input >= 0 && input <= arr.Length - 1)
             {
                 Console.WriteLine("Enter degree:");
                 var degree = Convert.ToInt32(Console.ReadLine());
@@ -233,15 +251,32 @@ namespace ManipulatingWithArray
                 {
                     result = result * arr[input];
                 }
-                arr[input]= result;
-                Console.WriteLine("Index "+ input + " changed: " + result);                
+                arr[input] = result;
+                Console.WriteLine("Index " + input + " changed: " + result);
             }
             else
             {
-                Console.WriteLine("Index incorrect");                
+                Console.WriteLine("Index incorrect");
             }
             return arr;
+        }
 
+        static int[] ChangeIndexInArray(int[] arr)
+        {
+            Console.WriteLine("Enter the index of array which you want to change:");
+            var index = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter nubmer:");
+            var input = Convert.ToInt32(Console.ReadLine());
+            arr[index] = input;
+            return arr;
+        }
+
+        static int[] ChangeArraySize(ref int[] arr)
+        {
+            Console.WriteLine("Enter a new array size: ");
+            var newSize= int.Parse(Console.ReadLine());
+            Array.Resize(ref arr, newSize);
+            return arr;
         }
     }
 }
